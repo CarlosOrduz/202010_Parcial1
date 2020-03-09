@@ -40,7 +40,7 @@
         </ol>
         <hr />
         <h2>Formulario de inscripción</h2>
-        <form>
+        <form id="form1" onsubmit="event.preventDefault(); register()">
             <div class="form-group">
                 <label for="nit">NIT</label>
                 <input type="text" class="form-control" id="nit" placeholder="Número de Identificación Tributaria">
@@ -49,16 +49,15 @@
                 <label for="razonsocial">Razón Social</label>
                 <input type="text" class="form-control" id="razonsocial" placeholder="Nombre del participante">
             </div>
-            <button type="submit" class="btn btn-primary">Registrarse</button>
+            <button type="submit" class="btn btn-primary" >Registrarse</button>
         </form>
         <hr />
         <h2>Listado de ofertas</h2>
         <!--Reemplace estos párrafos por las ofertas reales recibidas-->
-        <p>Consorcio F&R [Oferta no aceptada]</p>
-        <p>Grupo Fernánez Gómez [Oferta no aceptada]</p>
-        <p>Unión Temporal Sinergia [Oferta no aceptada]</p>
-        <p>Grupo DRFE [<strong>Oferta aceptada. Valor: $168.054.320</strong>]</p>
-        <button type="submit" class="btn btn-primary">Ofertar</button>
+        <div id="ofertas">
+
+        </div>
+        <button id="oferta" type="submit" class="btn btn-primary" disabled="true" onClick=ofertar()>Ofertar</button>
     </div>
 
 
@@ -74,6 +73,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/javascripts/main.js"></script>
+      
 </body>
 
 </html>
