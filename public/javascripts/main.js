@@ -18,6 +18,9 @@ socket.on("participantes", data => {
       .join(" ");
     console.log(html);
     document.getElementById("ofertas").innerHTML = html;
+    document.getElementById("oferta").disabled = true;
+    document.getElementById("form1").style.display = "initial"; 
+  
   }
 function register(){
       
